@@ -11,7 +11,7 @@ export const ProjectList: React.FC<ProjectListProps> = ({projects}) => {
 
     return (
         <ProjectListWrapper>
-           {projects.map(item => <ProjectItem project={item} />)}
+           {projects.map(item => <ProjectItem project={item} key={item.name} />)}
         </ProjectListWrapper>
     )
 }
