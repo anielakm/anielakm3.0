@@ -23,8 +23,8 @@ const Home: NextPage = () => {
   }, []);
   
   return (
-    <ThemeProvider theme={LightTheme}>
-      <LanguageProvider>
+    <ThemeProvider theme={LightTheme} >
+      <LanguageProvider >
         <>
           <Head>
             <title>Aniela Katana - Matłok | Front-end Developer</title>

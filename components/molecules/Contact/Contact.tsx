@@ -10,7 +10,7 @@ import Image from "next/image"
 export const Contact: React.FC = () => {
     const {currentLang} = useLanguageContext()
     return (
-        <ContactWrapper data-aos="fade-up">
+        <ContactWrapper data-aos="fade-up" id="contact">
             <Heading text={currentLang==='pl' ? texts.contact.pl : texts.contact.en} big />
             <Button text="kontakt@anielakm.pl" link="mailto:kontakt@anielakm.pl" light />
 
@@ -31,7 +31,8 @@ export const Contact: React.FC = () => {
 
 const ContactWrapper = styled.div`
 
-    margin-top: 100px;
+    margin-top: -100px;
+    padding-top: 200px;
     text-align: center;
 
     >*:first-child {

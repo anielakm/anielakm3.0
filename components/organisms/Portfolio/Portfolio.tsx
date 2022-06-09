@@ -7,7 +7,7 @@ import styled from "styled-components"
 export const Portfolio: React.FC = () => {
 
     return (
-        <PortfolioWrapper>
+        <PortfolioWrapper id="portfolio">
             <Heading text="Portfolio" big />
             <ProjectList projects={texts.portfolio.commercial} />
         </PortfolioWrapper>
@@ -17,14 +17,17 @@ export const Portfolio: React.FC = () => {
 
 const PortfolioWrapper = styled.div`
 
-    margin-top: 50px;
+    margin-top: -30px;
+    padding-top: 50px;
 
     @media ${device.mobile} {
-        margin-top: 100px;
+        padding-top: 100px;
+        margin-top: -30px;
     }
 
     @media ${device.tablet} {
-        margin-top: 200px;
+        margin-top: -50px;
+        padding-top: 150px;
     }
 
 `

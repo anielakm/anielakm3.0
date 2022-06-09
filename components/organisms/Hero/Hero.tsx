@@ -6,7 +6,7 @@ import styled from "styled-components"
 export const Hero:React.FC = () => {
     return (
 
-        <HeroWrapper>
+        <HeroWrapper id="about">
             <HeroImg />
             <HeroAbout />
         </HeroWrapper>
@@ -16,10 +16,9 @@ export const Hero:React.FC = () => {
 
 const HeroWrapper = styled.header`
 
-
     @media ${device.mobile} {
         display: flex;
-        margin-top: 100px;
+        padding-top: 100px;
     }
 
 `

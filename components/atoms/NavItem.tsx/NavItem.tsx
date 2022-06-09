@@ -1,4 +1,5 @@
 import { useLanguageContext } from "context/languageContext"
+import { useMenuContext } from "context/menuContext"
 import Link from "next/link"
 import styled from "styled-components"
 import { MenuLink } from "types/menu"
@@ -9,9 +10,9 @@ interface NavItemProps {
 
 export const NavItem: React.FC<NavItemProps> = ({route}) => {
     const {currentLang} = useLanguageContext()
-
+    const { isMenuOpen ,setIsMenuOpen } = useMenuContext()
     return (
-        <NavElement><Link href={route.path}>{currentLang === 'pl' ? route.name : route.nameEng}</Link></NavElement>
+        <NavElement onClick={()=>setIsMenuOpen(false)}><Link href={route.path} >{currentLang === 'pl' ? route.name : route.nameEng}</Link></NavElement>
     )
 }
 

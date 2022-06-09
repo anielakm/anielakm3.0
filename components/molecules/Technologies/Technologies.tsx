@@ -10,7 +10,7 @@ import { Li } from "components/atoms/Li/Li";
 export const Technologies: React.FC = () => {
     const {currentLang} = useLanguageContext();
     return (
-        <TechnologiesWrapper data-aos="fade-left">
+        <TechnologiesWrapper data-aos="fade-left" id="skills">
             <Col>
                 <Heading text={currentLang === 'pl' ? texts.technologies.title.pl : texts.technologies.title.en} />
                 <Ul>
