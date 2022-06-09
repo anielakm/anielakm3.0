@@ -11,6 +11,10 @@ interface menuInterface {
     setIsMenuOpen: Dispatch<SetStateAction<boolean>>
   }
 
+  interface MenuProviderProps {
+    children: JSX.Element
+  }
+
   const MenuContext = createContext<menuInterface>({
     isMenuOpen: false,
     setIsMenuOpen: () => {},
@@ -18,7 +22,7 @@ interface menuInterface {
 
 export const useMenuContext = () => useContext(MenuContext)
 
-const MenuProvider: React.FC = ({ children }) => {
+const MenuProvider: React.FC<MenuProviderProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (

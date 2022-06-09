@@ -11,6 +11,11 @@ interface languageInterface {
     setCurrentLang: Dispatch<SetStateAction<string>>
   }
 
+  interface LanguageProviderProps {
+    children: JSX.Element
+  }
+
+
   const LanguageContext = createContext<languageInterface>({
     currentLang: 'pl',
     setCurrentLang: () => {},
@@ -18,7 +23,7 @@ interface languageInterface {
 
 export const useLanguageContext = () => useContext(LanguageContext)
 
-const LanguageProvider: React.FC = ({ children }) => {
+const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [currentLang, setCurrentLang] = useState('pl')
 
   return (
