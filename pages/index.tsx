@@ -25,23 +25,25 @@ const Home: NextPage = () => {
   return (
     <ThemeProvider theme={LightTheme}>
       <LanguageProvider>
-        <Head>
-          <title>Aniela Katana - Matłok | Front-end Developer</title>
-          <meta name="description" content="" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <>
+          <Head>
+            <title>Aniela Katana - Matłok | Front-end Developer</title>
+            <meta name="description" content="" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-        <GlobalStyle />
+          <GlobalStyle />
 
-        <MenuProvider>
-          <Navbar />
-        </MenuProvider>
-        <Hero />
-        <Technologies />
-        <Skills />
-        <Portfolio />
-        <Contact />
-        <Footer />
+          <MenuProvider>
+            <Navbar />
+          </MenuProvider>
+          <Hero />
+          <Technologies />
+          <Skills />
+          <Portfolio />
+          <Contact />
+          <Footer />
+        </>
       </LanguageProvider>
     </ThemeProvider>
   )
