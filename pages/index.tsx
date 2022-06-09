@@ -12,10 +12,9 @@ import { Skills } from 'components/organisms/Skills/Skills'
 import { Portfolio } from 'components/organisms/Portfolio/Portfolio'
 import { Contact } from 'components/molecules/Contact/Contact'
 import { Footer } from 'components/molecules/Footer/Footer'
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useEffect } from 'react'
-
+const AOS = require('aos');
 
 const Home: NextPage = () => {
 
